@@ -1,0 +1,56 @@
+.interview {
+	margin-top: 40px;
+
+	/* .interview__container */
+	&__container {}
+
+	/* .interview__body */
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	/* .interview__carts */
+	&__carts {
+		justify-content: space-evenly;
+	}
+
+	/* .interview__expert */
+	&__expert {
+		padding: 20px 0;
+		position: relative;
+	}
+
+	/* .interview__expert-title */
+	&__expert-title {
+		padding: 0 20px;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 135%;
+		text-align: center;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: $blue;
+	}
+
+	/* .interview__expert-img */
+	&__expert-img {
+		margin-top: 30px;
+	}
+
+	/* .interview__expert-btn */
+	&__expert-btn {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 190px;
+	}
+
+	/* .interview__btn */
+	&__btn {
+		width: 253px;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,39 @@
+<div class="feedback">
+	<div class="feedback__container _container">
+		<h2 class="feedback__title title_h2">
+			Задать вопрос эксперту
+		</h2>
+		<div class="feedback__body">
+			<div class="feedback__img">
+				<img src="img/form.png" alt="Задать вопрос эксперту">
+			</div>
+			<div class="feedback__inner">
+				<div class="feedback__descr">
+					Наши специалисты помогут найти решение в любой, даже самой сложной ситуации
+				</div>
+				<form data-test data-ajax="true" class="form feedback__form" action="sendmail.php" method="post">
+					<div class="form__line">
+						<input autocomplete="off" type="text" name="name" data-error="Это поле обязательное для заполнения"
+							data-value="" class="form__input input feedback__input _req">
+						<label for="name">Имя</label>
+					</div>
+					<div class="form__line">
+						<input autocomplete="off" type="email" name="email" data-error="Это поле обязательное для заполнения"
+							data-value="" class="form__input input feedback__input _req _email">
+						<label for="email">Email</label>
+					</div>
+					<div class="form__line">
+						<textarea data-gramm_editor="false" autocomplete="off" type="text" name="text" data-error="Это поле обязательное для заполнения"
+							data-value="" class="form__input input feedback__input _req"></textarea>
+						<label for="text">Ваш вопрос</label>
+					</div>
+					<button type="submit" class="feedback__btn button button__green">Отправить</button>
+				</form>
+				<div class="feedback__notice">
+					Нажимая на кнопку Отправить вы соглашаетесь с условиями обработки персональных данных и Политикой
+					конфиденциальности
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

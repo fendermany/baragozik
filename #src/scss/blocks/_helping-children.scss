@@ -1,0 +1,38 @@
+.helping-children {
+	margin-top: 70px;
+
+	/* .helping-children__container */
+	&__container {}
+
+	/* .helping-children__title */
+	&__title {}
+
+	/* .helping-children__body */
+	&__body {
+		margin: 40px auto 0 auto;
+		max-width: 640px;
+	}
+
+	/* .helping-children__item */
+	&__item {
+		span {
+			display: block;
+			margin-top: 10px;
+		}
+
+		&~.helping-children__item {
+			margin-top: 40px;
+		}
+	}
+
+	/* .helping-children__nb */
+	&__nb {
+		padding: 20px 40px;
+		margin: 40px 0;
+		border: 2px solid $pink;
+		border-radius: 10px;
+	}
+	a{
+		color: $mainColor;
+	}
+}

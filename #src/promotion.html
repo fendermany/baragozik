@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Реклама"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page">
+			<div class="promotion">
+				<div class="promotion__container _container">
+					<h2 class="promotion__title title_h2">реклама на сайте</h2>
+					<div class="promotion__audience">
+						<img src="img/audition.svg" alt="Аудитория" class="promotion__audience-img">
+						<div class="promotion__audience-body">
+							<h3 class="promotion__audience-title title_h3">Наша аудитория</h3>
+							<span class="promotion__audience-descr title_h5">
+								Родители и люди, участвующие в воспитании и развитии детей. 80% аудитории женщины, 60%
+								из них относятся к возрастной группе 25–34 года
+							</span>
+						</div>
+					</div>
+					<div class="promotion__statistics">
+						<div class="promotion__statistics-body">
+							<h3 class="promotion__statistics-title title_h3">Статистика сайта ежемесячно растет</h3>
+							<div class="promotion__statistics-descr title_h5">
+								<a href="www.liveinternet.ru/stat/baragozik.ru/">www.liveinternet.ru/stat/baragozik.ru/</a>
+								<br><br>
+								Ежедневно сайт посещают около 12- 16 000 тыс. уникальных посетителей из следующих регионов:
+								<br><br>
+								[1] — Москва [2] — Санкт-Петербург [3] — Екатеринбург [4] — Краснодар [5] — Новосибирск и др.
+							</div>
+						</div>
+						<div class="promotion__statistics-img">
+							<img src="img/stat.png" alt="Статистика">
+						</div>
+					</div>
+					<div class="promotion__price">
+						<h2 class="title_h2">Рекламные возможности</h2>
+						<h3 class="promotion__price-subtitle title_h3">Баннерная реклама</h3>
+						<h5 class="promotion__price-descr title_h5">
+							Все баннеры сквозные — более 600 000 показов в месяц!
+						</h5>
+						<div class="promotion__price-body">
+							<div class="promotion__price-table">
+								<table>
+									<tr>
+										<th>Наименование</th>
+										<th>Размер</th>
+										<th>Стоимость</th>
+									</tr>
+									<tr>
+										<td>Баннер 1, сквозной, все страницы</td>
+										<td>100x90, 728×90</td>
+										<td>20 000 ₽/мес.</td>
+									</tr>
+									<tr>
+										<td>Баннер 2, сквозной, все страницы</td>
+										<td>468×60</td>
+										<td>15 000 ₽/мес.</td>
+									</tr>
+								</table>
+							</div>
+							<div class="promotion__price-img">
+								<img src="img/slider.png" alt="Реклама">
+							</div>
+						</div>
+					</div>
+					<div class="promotion__table">
+						<h3 class="title_h3">
+							Рекламные и PR статьи,<br> размещение пресс релизов
+						</h3>
+						<h5 class="promotion__table-subtitle title_h5">
+							Статьи размещаются в основных разделах сайта
+						</h5>
+						<div class="promotion__table-body">
+							<table>
+								<tr>
+									<td>
+										<span class="title_h6">Размещение PR статьи навсегда</span><br>
+										<span class="title_h5">(пиар статья не содержит ссылок на др. сайты)</span>
+									</td>
+									<td>3500 ₽ / навсегда</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="title_h6">Размещение Вашей рекламной статьи</span><br>
+										<span class="title_h5">(пиар статья не содержит ссылок на др. сайты)</span>
+									</td>
+									<td>16 000 ₽ / навсегда</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="promotion__rules">
+						<h3 class="title_h3">Правила размещения рекламы</h3>
+						<ol class="promotion__rules-list">
+							<li class="text_b2">
+								Рекламные материалы (тексты, баннеры, фото) предоставляются заказчиком. Текстовые материалы
+								должны соответствовать требованиям: уникальность не менее 80%, грамотность. Формат
+								предоставления фото: jpeg, gif.
+							</li>
+							<li class="text_b2">
+								Просим быть внимательными при согласовании рекламных материалов. В течение размещаемого периода
+								возможно внесение изменений по Вашей просьбе (редактирование контента, замена картинок и пр.)
+								первый раз бесплатно, каждое последующее изменение 100 руб.
+							</li>
+						</ol>
+					</div>
+					<div class="promotion__email">
+						<span class="title_h5">
+							По вопросам рекламы пишите с пометкой «реклама на проекте baragozik.ru
+						</span>
+						<img src="img/arrow.png" alt="Пишите на email">
+						<span class="title_h5">
+							<a href="mailto:info@baragozik.ru">info@baragozik.ru</a>»
+						</span>
+					</div>
+				</div>
+			</div>
+			@@include('_subscription.html',{})
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

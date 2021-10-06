@@ -1,0 +1,69 @@
+.last-faq {
+	margin-top: 60px;
+
+	/* .last-faq__container */
+	&__container {}
+
+	&__wrapper {
+		border: 1px solid $gray3;
+		border-radius: 10px;
+		padding: 20px 0;
+		@include adaptiv-value("padding-left", 120, 20, 1);
+		@include adaptiv-value("padding-right", 120, 20, 1);
+	}
+
+	/* .last-faq__title */
+	&__title {}
+
+	/* .last-faq__body */
+	&__body {
+		margin-top: 35px;
+		column-count: 1;
+		column-gap: 60px;
+		@include adaptiv-value("column-gap", 60, 20, 1);
+		position: relative;
+		@media (min-width:$md4+px){
+			column-count: 2; 
+		}
+		&::after {
+			content: '';
+			height: 100%;
+			width: 1px;
+			background: $gray4;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			display: none;
+			@media (min-width:$md4+px){
+				 display: block; 
+			}
+		}
+	}
+
+	/* .last-faq__item */
+	&__item {
+		margin-bottom: 30px;
+		page-break-inside: avoid;
+		display: inline-block;
+	}
+
+	/* .last-faq__subtitle */
+	&__subtitle {
+		color: $pink;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		display: block;
+		&:hover{
+			color: $pink-hover;
+			font-weight: 700;
+		}
+	}
+
+	/* .last-faq__descr */
+	&__descr {
+		display: block;
+		margin-top: 4px;
+		color: $mainColor;
+	}
+}

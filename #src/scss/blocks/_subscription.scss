@@ -1,0 +1,55 @@
+.subscription {
+	margin-top: 80px;
+	min-height: 550px;
+	padding: 0;
+	@include adaptiv-value("padding-top", 70, 40, 1);
+	@include adaptiv-value("padding-bottom", 45, 20, 1);
+	background: linear-gradient(180deg, rgba(61, 61, 61, 0.55) 45.73%, rgba(61, 61, 61, 0.2365) 100%);
+	@media (min-width:$md3+px){
+		min-height: 458px;
+	}
+	img {
+		z-index: -1;
+	}
+
+	/* .subscription__container */
+	&__container {}
+
+	/* .subscription__body */
+	&__body {}
+
+	/* .subscription__title */
+	&__title {
+		@include adaptiv-value("font-size", 55, 36, 1);
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: $white;
+		text-align: center;
+	}
+
+	&__form {
+		max-width: 527px;
+		margin: 16px auto 0 auto;
+
+		input {
+			background: rgba(255, 255, 255, 0.74);
+		}
+
+		label {
+			z-index: 100;
+			pointer-events: none;
+		}
+	}
+
+	/* .subscription__descr */
+	&__descr {
+		max-width: 527px;
+		padding: 30px 40px;
+		margin: 20px auto 0 auto;
+		background: rgba(250, 70, 89, 0.76);
+		border-radius: 10px;
+		font-size: 20px;
+		text-align: center;
+		color: $white;
+	}
+}

@@ -1,0 +1,23 @@
+.last-news {
+	margin-top: 40px;
+	/* .last-news__container */
+	&__container {
+	}
+	/* .last-news__body */
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+	/* .last-news__carts */
+	&__carts {
+		.cart__img{
+			height: 204px;
+		}
+	}
+	/* .last-news__btn */
+	&__btn {
+		margin: 0 auto;
+	}
+}
+
