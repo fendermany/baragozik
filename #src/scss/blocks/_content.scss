@@ -1,0 +1,309 @@
+//<CONTENT>===========================================================================================================
+.content {
+	ul {
+		@include adaptiv-value("padding-left", 45, 20, 1);
+		margin-top: 30px;
+
+		li {
+			list-style: none;
+			position: relative;
+
+			&:before {
+				content: '';
+				background: $pink;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 9.33px;
+				height: 9.33px;
+				position: absolute;
+				transform: rotate(45deg);
+				left: -25px;
+				top: 5px;
+			}
+		}
+
+		li~li {
+			margin-top: 30px;
+		}
+	}
+
+	table {
+		border-collapse: collapse;
+		border: 2px solid #fff;
+	}
+
+	td {
+		@include adaptiv-value("font-size", 20, 14, 1);
+
+	}
+
+	th {
+		@include adaptiv-value("font-size", 16, 10, 1);
+	}
+
+	td,
+	th {
+		@include adaptiv-value("padding", 30, 10, 1);
+		border: 1px solid $gray3;
+	}
+
+	p{
+		@media (min-width:$md3+px){
+			width: 65%; 
+		}
+	}
+
+	.blue_citat {
+		background: #F2F2F2;
+		border-radius: 10px;
+		padding: 20px;
+		@include adaptiv-value("padding-right", 80, 20, 1);
+		font-weight: 600;
+		color: $pink-hover;
+		margin-top: 20px;
+	}
+
+	.green_citat {
+		background: $green;
+		line-height: 200%;
+		width: max-content;
+		border-radius: 10px;
+		padding: 20px 0;
+		@include adaptiv-value("padding-left", 40, 20, 1);
+		@include adaptiv-value("padding-right", 70, 20, 1);
+		position: relative;
+		margin-top: 40px;
+
+		&:before {
+			@include adaptiv-value("font-size", 70, 50, 1);
+			color: $blue;
+			position: absolute;
+			top: -30px;
+			@include adaptiv-value("right", -20, -10, 1);
+		}
+	}
+
+	.plus {
+		background: #F2F2F2;
+		border-radius: 10px;
+		padding: 30px 0;
+		@include adaptiv-value("padding-left", 70, 50, 1);
+		@include adaptiv-value("padding-right", 70, 50, 1);
+		margin-top: 20px;
+
+		&__title {
+			position: relative;
+
+			img {
+				position: absolute;
+				width: 29px;
+				height: 29px;
+				left: -39px;
+				top: 0;
+			}
+		}
+
+		&__content {
+			margin-top: 20px;
+
+			&>ul {
+				margin-top: 0;
+				padding: 0 0 0 10px;
+			}
+		}
+	}
+
+	.minus {
+		background: #F2F2F2;
+		border-radius: 10px;
+		padding: 30px 0;
+		@include adaptiv-value("padding-left", 70, 50, 1);
+		@include adaptiv-value("padding-right", 70, 50, 1);
+		margin-top: 20px;
+
+		&__title {
+			position: relative;
+
+			img {
+				position: absolute;
+				width: 29px;
+				height: 29px;
+				left: -39px;
+				top: 0;
+			}
+		}
+
+		&__content {
+			margin-top: 20px;
+
+			&>ul {
+				margin-top: 0;
+				padding: 0 0 0 10px;
+			}
+		}
+	}
+
+	.calendar {
+		padding: 7px;
+		border: 4px solid #76e1f8;
+		position: relative;
+		float: left;
+		width: 700px;
+
+		ul {
+			li {
+				float: left;
+				background: none;
+				padding: 0;
+				width: 25%;
+				text-align: center;
+				margin-bottom: 20px;
+
+				a {
+					padding: 5px 10px;
+					border-radius: 3px;
+					box-shadow: 1px 1px 5px transparent;
+					color: #038284;
+					font-size: 14px;
+
+					&:hover {
+						box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+						background-image: -webkit-gradient(linear,
+								left top,
+								left bottom,
+								color-stop(0, #ACDE8A),
+								color-stop(1, #75A954));
+						background-image: -o-linear-gradient(bottom, #ACDE8A 0%, #75A954 100%);
+						background-image: -moz-linear-gradient(bottom, #ACDE8A 0%, #75A954 100%);
+						background-image: -webkit-linear-gradient(bottom, #ACDE8A 0%, #75A954 100%);
+						background-image: -ms-linear-gradient(bottom, #ACDE8A 0%, #75A954 100%);
+						background-image: linear-gradient(to bottom, #ACDE8A 0%, #75A954 100%);
+						color: #fff;
+						text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+						text-decoration: none;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+
+		.title2 {
+			color: #038284;
+			padding: 10px 20px;
+			background: #efefed;
+			border-radius: 5px;
+			font-weight: bold;
+			font-size: 14px;
+		}
+
+		&_block {
+			position: relative;
+			float: left;
+			width: 100%;
+			margin-bottom: 20px;
+
+			.title {
+				font-weight: bold;
+				font-size: 14px;
+				color: #282828;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.calendar_block.yellow .calendar {
+	border: 4px solid #fdd45c;
+}
+
+.calendar_block.yellow .calendar .title2 {
+	color: #927625;
+}
+
+.calendar_block.yellow .calendar a {
+	color: #927625;
+}
+
+.calendar_block.red .calendar {
+	border: 4px solid #f7598f;
+}
+
+.calendar_block.red .calendar .title2 {
+	color: #a70842;
+}
+
+.calendar_block.red .calendar a {
+	color: #a70842;
+}
+
+.calendar_block.green .calendar {
+	border: 4px solid #87d557;
+}
+
+.calendar_block.green .calendar .title2 {
+	color: #6f9b53;
+}
+
+.calendar_block.green .calendar a {
+	color: #6f9b53;
+}
+
+.clear {
+	position: relative;
+	clear: both;
+	width: 100%;
+	height: 0;
+}
+
+
+.navi {
+	position: relative;
+	float: left;
+}
+
+.navi ul li {
+	padding: 0;
+	background: none;
+	margin-bottom: 20px;
+}
+
+.navi ul li a {
+	width: 249px;
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	line-height: 37px;
+}
+
+.navi ul li:nth-child(1) a,
+.navi ul li:nth-child(5) a,
+.navi ul li:nth-child(9) a {
+	background: url(images/btn1.png) 0 0 no-repeat;
+	color: #038284;
+}
+
+.navi ul li:nth-child(2) a,
+.navi ul li:nth-child(6) a,
+.navi ul li:nth-child(10) a {
+	background: url(images/btn2.png) 0 0 no-repeat;
+	color: #827c69;
+}
+
+.navi ul li:nth-child(3) a,
+.navi ul li:nth-child(7) a,
+.navi ul li:nth-child(11) a {
+	background: url(images/btn3.png) 0 0 no-repeat;
+	color: #a70842;
+}
+
+.navi ul li:nth-child(4) a,
+.navi ul li:nth-child(8) a,
+.navi ul li:nth-child(12) a {
+	background: url(images/btn4.png) 0 0 no-repeat;
+	color: #407c1b;
+}
+
+//</CONTENT>===========================================================================================================

@@ -1,3 +1,4 @@
+//<AFFICHE>===========================================================================================================
 .affiche {
 	margin-top: 70px;
 
@@ -11,10 +12,11 @@
 	&__menu {
 		margin-top: 40px;
 		overflow-x: auto;
-		@media (min-width:$md1+px){
-			padding: 0 45px; 
+
+		@media (min-width:$md1+px) {
+			padding: 0 45px;
 		}
-		
+
 		&::-webkit-scrollbar {
 			background-color: $gray4;
 			height: 5px;
@@ -47,10 +49,14 @@
 	&__body {
 		margin-top: 40px;
 		grid-auto-flow: dense;
-
-		@media (max-width:$md4+px) {
-			display: flex;
-			flex-direction: column;
+		display: flex;
+		flex-direction: column;
+		@media (min-width:$md4+px){
+			display: grid;
+			grid-template: 1fr / repeat(auto-fit, minmax(200px, 1fr));
+		}
+		@media (min-width:$md3+px){
+			grid-template: 1fr / repeat(auto-fit, minmax(260px, 1fr));
 		}
 	}
 
@@ -116,3 +122,5 @@
 		margin: 40px auto 0 auto;
 	}
 }
+
+//</AFFICHE>===========================================================================================================

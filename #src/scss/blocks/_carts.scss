@@ -18,8 +18,9 @@
 	background: #fff;
 	position: relative;
 	transition: 1s;
-	margin: 0 auto;
-
+	&.aside__item{
+		height: 486px;
+	}
 	&:hover {
 		box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 	}
@@ -90,5 +91,8 @@
 		&:before {
 			position: static;
 		}
+	}
+	&__descr{
+		margin-top: 7px;
 	}
 }

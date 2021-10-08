@@ -8,6 +8,7 @@
 	border-radius: 30px;
 	color: $white;
 	font-weight: 600;
+	cursor: pointer;
 
 	&.badge {
 		width: max-content;
@@ -53,6 +54,7 @@
 		text-transform: none;
 		background: $green;
 		color: $mainColor;
+
 		&:hover {
 			background: $green-hover;
 		}
@@ -122,6 +124,7 @@
 		cursor: pointer;
 
 		&:before {
+			pointer-events: none;
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -146,6 +149,12 @@
 			color: $white;
 		}
 	}
+
+	&__link {
+		width: 33px;
+		height: 33px;
+		display: block;
+	}
 }
 
 .sticky {
@@ -155,14 +164,12 @@
 	width: 100%;
 	z-index: 999;
 
-	.button__enter {}
-
 	.icon-menu {
 		left: 20px;
 	}
 }
 
-.input.filled {
+.input._filled {
 	border: 1px solid #9BE69E;
 }
 

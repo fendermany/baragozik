@@ -34,13 +34,19 @@
 							<a href="/affiche.html" class="menu__link">Афиша СПб</a>
 						</li>
 						<li class="menu__item">
-							<a href="/contests.html" class="menu__link">Конкурсы</a>
+							<a href="/single.html" class="menu__link">Страница новости</a>
 						</li>
 						<li class="menu__item">
 							<a href="/promotion.html" class="menu__link">Реклама</a>
 						</li>
 						<li class="menu__item">
 							<a href="/contacts.html" class="menu__link">Контакты</a>
+						</li>
+						<li class="menu__item">
+							<a href="/calendar.html" class="menu__link">Календарь</a>
+						</li>
+						<li class="menu__item">
+							<a href="/partners.html" class="menu__link">Партнеры</a>
 						</li>
 					</ul>
 				</nav>
@@ -49,17 +55,17 @@
 		</div>
 		<div class="header__center">
 			<div class="header__logo logo">
-				<a class="logo__img" href="#"><img src="img/logo.png" alt="Логотип"></a>
-				<a href="#" class="logo__text">
+				<a class="logo__img" href="/"><img src="img/logo.png" alt="Логотип"></a>
+				<a href="/" class="logo__text">
 					<span>BARAGOZIK.RU</span>
 					<span>Вырастим счастливое поколение!</span>
 				</a>
 			</div>
 			<div class="header__descr content">
-				Миссия проекта Baragozik - <br>
-				сделать важный вклад в здоровье и гармоничное развитие детей в России
+				<div class="title_h4">Миссия проекта Baragozik -</div>
+				<div class="text_b1">сделать важный вклад в здоровье и гармоничное развитие детей в России</div>
 			</div>
-			<a href="#" class="header__btn button button__blue">
+			<a href="#subscribe" class="header__btn button button__blue _popup-link">
 				Оформить подписку
 			</a>
 		</div>
@@ -87,8 +93,8 @@
 				</li>
 			</ul>
 			<div class="header__btns">
-				<a href="" class="header__btn button button__white">Станьте нашим экспертом</a>
-				<a href="#" class="header__btn button button__pink">Поддержите проект</a>
+				<a href="#expert" class="header__btn button button__white _popup-link">Станьте нашим экспертом</a>
+				<a href="#donate" class="header__btn button button__pink _popup-link">Поддержите проект</a>
 			</div>
 		</div>
 		<nav class="header__rubrics rubrics-menu">
@@ -197,16 +203,17 @@
 					</div>
 				</div>
 			</div>
-			<div class="subscription _ibg">
+		</main>
+		<div class="subscription _ibg">
 	<img src="img/podpiska.png" alt="Подписка">
 	<div class="subscription__container _container">
 		<div class="subscription__body">
 			<h1 class="subscription__title">
 				рассылка baragozik
 			</h1>
-			<form data-test data-ajax="true" class="subscription__form form" action="sendmail.php" method="post">
+			<form data-test data-ajax="true" data-message="thankyou" class="subscription__form form" action="sendmail.php" method="post">
 				<div class="form__line">
-					<input autocomplete="off" type="email" name="email" data-error="Это поле обязательное для заполнения"
+					<input autocomplete="off" type="text" name="email" data-error="Это поле обязательное для заполнения"
 						data-value="" class="form__input input _req _email">
 					<label for="email">Введите свой email</label>
 				</div>
@@ -218,7 +225,6 @@
 		</div>
 	</div>
 </div>
-		</main>
 		<footer class="footer">
 	<div class="footer__container _container">
 		<div class="footer__body">
@@ -281,29 +287,132 @@
 	</div>
 </footer>
 	</div>
-	<div class="popup popup_popup">
+	<div class="popup popup_subscribe">
 	<div class="popup__content">
 		<div class="popup__body">
-			<div class="popup__close"></div>
+			<div class="popup__close">
+				<span></span>
+				<span></span>
+			</div>
+			<div class="title_h3">
+				Хотите первыми<br>
+				узнавать о новостях?
+			</div>
+			<div class="title_h4">
+				Полезная рассылка самых актуальных новостей каждый понедельник
+			</div>
+			<form class="form" data-test data-ajax="true" data-message="thankyou" method="post" action="sendmail.php">
+				<div class="form__line">
+					<input autocomplete="off" type="text" name="email" data-error="Это поле обязательное для заполнения"
+						data-value="" class="form__input input _req _email">
+					<label for="email">E-mail</label>
+				</div>
+				<label class="checkbox">
+					<input data-error="Ошибка" data-value="" class="checkbox__input _req" type="checkbox" value="1"
+						name="form[]">
+					<span class="checkbox__text"><span>Нажимая на кнопку Отправить вы соглашаетесь с <a
+								href="/policy">Политикой конфиденциальности</a></span></span>
+				</label>
+				<button type="submit" class="form__btn btn _icon-arrow_right_square"></button>
+			</form>
 		</div>
 	</div>
 </div>
-<div class="popup popup_massagename-message">
+<div class="popup popup_expert">
 	<div class="popup__content">
 		<div class="popup__body">
-			<div class="popup__close"></div>
+			<div class="popup__close">
+				<span></span>
+				<span></span>
+			</div>
+			<div class="title_h3">
+				Вам есть что сказать?
+			</div>
+			<div class="title_h4">
+				Полезная рассылка самых актуальных новостей каждый понедельник
+			</div>
+			<form data-test data-ajax="true" data-message="thankyou" class="form" action="sendmail.php" method="post">
+				<div class="form__line">
+					<input autocomplete="off" type="text" name="name" data-error="Это поле обязательное для заполнения"
+						data-value="" class="form__input input _req">
+					<label for="name">Имя</label>
+				</div>
+				<div class="form__line">
+					<input autocomplete="off" type="text" name="phone" data-error="Это поле обязательное для заполнения"
+						data-value="" class="form__input input _req _phone"></input>
+					<label for="text">Телефон</label>
+				</div>
+				<div class="form__line">
+					<input autocomplete="off" type="text" name="email" data-error="Это поле обязательное для заполнения"
+						data-value="" class="form__input input _req _email">
+					<label for="email">E-mail</label>
+				</div>
+				<div class="popup__form-footer">
+					<span>
+						Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования Платформы
+					</span>
+					<button type="submit" class="button button__pink">Стать экспертом</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
-<div class="popup popup_video">
+<div class="popup popup_donate">
 	<div class="popup__content">
 		<div class="popup__body">
-			<div class="popup__close popup__close_video"></div>
-			<div class="popup__video _video"></div>
+			<div class="popup__close">
+				<span></span>
+				<span></span>
+			</div>
+			<div class="title_h3">
+				Готовы оказать<br>
+				поддержку проекту?
+			</div>
+			<div class="title_h4">
+				Оставьте свои данные, и мы направим вам информацию на e-mail
+			</div>
+			<form data-test data-message="thankyou" data-ajax="true" class="form" action="sendmail.php" method="post">
+				<div class="form__line">
+					<input autocomplete="off" type="text" name="name" data-error="Это поле обязательное для заполнения"
+						data-value="" class="form__input input _req">
+					<label for="name">Имя</label>
+				</div>
+				<div class="form__line">
+					<input autocomplete="off" type="text" name="phone" data-error="Это поле обязательное для заполнения"
+						data-value="" class="form__input input _req _phone"></input>
+					<label for="text">Телефон</label>
+				</div>
+				<div class="form__line">
+					<input autocomplete="off" type="text" name="email" data-error="Это поле обязательное для заполнения"
+						data-value="" class="form__input input _req _email">
+					<label for="email">E-mail</label>
+				</div>
+				<div class="popup__form-footer">
+					<span>
+						Нажимая на кнопку, я соглашаюсь на обработку персональных данных и с правилами пользования Платформы
+					</span>
+					<button type="submit" class="button button__pink">Поддержать проект</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
-
+<div class="popup popup_thankyou-message">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close">
+				<span></span>
+				<span></span>
+			</div>
+			<div class="title_h3">
+				Спасибо!
+			</div>
+			<div class="title_h4">
+				Все успешно
+			</div>
+		</div>
+	</div>
+</div>
 	<!-- Swiper -->
 <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 <script src="js/vendors.min.js"></script>

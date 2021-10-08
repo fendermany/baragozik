@@ -79,7 +79,7 @@ function form_validate_input(input) {
 		}
 		if (email_test(input) || input.value == input_g_value) {
 			form_add_error(input);
-			input.classList.remove('filled');
+			input.classList.remove('_filled');
 			error++;
 		} else {
 			form_remove_error(input);
@@ -90,7 +90,7 @@ function form_validate_input(input) {
 	} else {
 		if (input.value == '' || input.value == input_g_value) {
 			form_add_error(input);
-			input.classList.remove('filled');
+			input.classList.remove('_filled');
 			error++;
 		} else {
 			form_remove_error(input);
@@ -98,6 +98,18 @@ function form_validate_input(input) {
 	}
 	return error;
 }
+
+//Checkbox
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+checkboxes.forEach(checkbox => {
+	"use strict";
+	checkbox.addEventListener('click', (e) => {
+		if (checkbox.classList.contains('_error')) {
+			form_remove_error(checkbox);
+		}
+	});
+});
 
 function form_add_error(input) {
 	input.classList.add('_error');
@@ -379,9 +391,9 @@ function inputs_init(inputs) {
 			}
 			input.addEventListener('input', (e) => {
 				if (input.value != '' && input.value != input_g_value && !input.classList.contains('_error')) {
-					input.classList.add('filled');
+					input.classList.add('_filled');
 				} else {
-					input.classList.remove('filled');
+					input.classList.remove('_filled');
 				}
 			});
 
@@ -417,7 +429,7 @@ function inputs_init(inputs) {
 					//'+38(999) 999 9999'
 					//'+375(99)999-99-99'
 					input.classList.add('_mask');
-					Inputmask("+375 (99) 9999999", {
+					Inputmask("+7(999) 999 9999", {
 						//"placeholder": '',
 						clearIncomplete: true,
 						clearMaskOnLostFocus: true,

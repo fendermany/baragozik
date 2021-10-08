@@ -102,6 +102,8 @@ body {
 @import "header";
 @import "footer";
 
+
+//Blocks
 @import "blocks/promo";
 @import "blocks/carts";
 @import "blocks/interview";
@@ -115,11 +117,19 @@ body {
 @import "blocks/reviews";
 @import "blocks/partners";
 
+
+//Pages
 @import "blocks/affiche";
 @import "blocks/promotion";
 @import "blocks/contacts";
 @import "blocks/helping-children";
 @import "blocks/about";
+@import "blocks/single";
+
+
+// Deep
+@import "blocks/content";
+@import "blocks/plugins";
 
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
@@ -127,6 +137,30 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
 	flex: 1 1 auto;
+	&._container{
+		display: flex;
+		@include adaptiv-value("gap", 100, 0, 1);
+		margin-top: 80px;
+		&.cp{
+			gap: 40px;
+		}
+	}
+}
+
+.aside {
+	flex: 0 0 300px;
+	display: none;
+	&.cp{
+		flex: 0 0 260px;
+	}
+	@media (min-width:$md2+px){
+		 display: block; 
+	}
+	/* .aside__body */
+	&__body {}
+
+	/* .aside__item */
+	&__item {}
 }
 //===================================================================================================================================
 

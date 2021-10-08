@@ -1,0 +1,72 @@
+//<ABOUT>===========================================================================================================
+.about {
+	margin: 70px auto 0 auto;
+	max-width: 640px;
+	/* .about__container */
+	&__container {
+	}
+	/* .about__title */
+	&__title {
+	}
+	/* .about__photo */
+	&__photo {
+		margin-top: 35px;
+		display: flex;
+		flex-direction: column;
+		grid-template: 1fr / 1fr 1.6fr;
+		@include adaptiv-value("gap", 45, 20, 1);
+		@media (min-width:$md3+px){
+			display: grid; 
+		}
+	}
+	/* .about__photo-img */
+	&__photo-img {
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	/* .about__photo-descr */
+	&__photo-descr {
+
+	}
+	/* .about__reason */
+	&__reason {
+		margin-top: 40px;
+	}
+	/* .about__content */
+	&__content {
+		margin-top: 10px;
+	}
+	/* .about__how */
+	&__how {
+		margin-top: 65px;
+		display: flex;
+		flex-direction: column;
+		grid-template: 1fr / 1fr 2fr;
+		gap: 30px;
+		@media (min-width:$md3+px){
+			display: grid; 
+		}
+	}
+	/* .about__how-img */
+	&__how-img {
+		margin: 0;
+		@media (min-width:$md3+px){
+			margin-left: -70px;
+		}
+		
+	}
+	/* .about__how-descr */
+	&__how-descr {
+		h3{
+			margin-bottom: 20px;
+		}
+	}
+
+	&__how-btn{
+		margin-top: 25px;
+	}
+}
+//</ABOUT>===========================================================================================================

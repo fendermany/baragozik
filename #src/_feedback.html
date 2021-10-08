@@ -11,14 +11,14 @@
 				<div class="feedback__descr">
 					Наши специалисты помогут найти решение в любой, даже самой сложной ситуации
 				</div>
-				<form data-test data-ajax="true" class="form feedback__form" action="sendmail.php" method="post">
+				<form data-test data-ajax="true" data-message="thankyou" class="form feedback__form" action="sendmail.php" method="post">
 					<div class="form__line">
 						<input autocomplete="off" type="text" name="name" data-error="Это поле обязательное для заполнения"
 							data-value="" class="form__input input feedback__input _req">
 						<label for="name">Имя</label>
 					</div>
 					<div class="form__line">
-						<input autocomplete="off" type="email" name="email" data-error="Это поле обязательное для заполнения"
+						<input autocomplete="off" type="text" name="email" data-error="Это поле обязательное для заполнения"
 							data-value="" class="form__input input feedback__input _req _email">
 						<label for="email">Email</label>
 					</div>

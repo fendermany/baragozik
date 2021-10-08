@@ -10,6 +10,7 @@
 	height: 100%;
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
+
 	&::before {
 		content: "";
 		background-color: rgba(0, 0, 0, 0.9);
@@ -21,27 +22,34 @@
 		opacity: 0;
 		transition: opacity 0.8s ease 0s;
 	}
+
 	&.show {
 		visibility: visible;
 		overflow: auto;
+
 		&::before {
 			opacity: 1;
 		}
+
 		.popup__body {
 			transform: scale(1);
 		}
 	}
+
 	&._active {
 		overflow: auto;
 		visibility: visible;
+
 		&::before {
 			opacity: 1;
 		}
+
 		.popup__body {
 			transition: all 0.3s ease 0.2s;
 			transform: scale(1);
 		}
 	}
+
 	// .popup__content
 	&__content {
 		display: flex;
@@ -54,26 +62,180 @@
 		justify-content: center;
 		align-items: center;
 	}
+
 	// .popup__body
 	&__body {
 		transform: scale(0);
 		transition: all 0.3s ease 0s;
-		background-color: #fff;
+		background: #FDFDFD;
 		padding: 50px;
 		width: 100%;
-		max-width: 800px;
+		max-width: 555px;
+		background: #FDFDFD;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
 	}
+
 	// .popup__close
 	&__close {
-		width: 15px;
-		height: 15px;
+		width: 28px;
+		height: 28px;
 		position: absolute;
-		top: 0px;
-		right: 0px;
+		top: 20px;
+		right: 20px;
 		cursor: pointer;
 		z-index: 30;
-		background: url("../img/icons/close.svg") 0 0 no-repeat;
+		border: 1px solid $gray3;
+		border-radius: 5px;
+
+		span {
+			width: 15px;
+			height: 2px;
+			background: $gray3;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			&:first-child {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+
+			&:last-child {
+				transform: translate(-50%, -50%) rotate(-45deg);
+				border-radius: 2px;
+			}
+		}
+	}
+
+	&__form {
+		&-footer {
+			margin-top: 20px;
+			display: flex;
+			flex-direction: column;
+			grid-template: 1fr / 1fr minmax(min-content, max-content);
+			gap: 20px;
+			@media (min-width:$md3+px){
+				display: grid; 
+			}
+			span {
+				font-size: 12px;
+				order: 1;
+				@media (min-width:$md3+px){
+					 order: 0; 
+				}
+			}
+			button{
+				width: 221px;
+				order: 0;
+				@media (min-width:$md3+px){
+					 order: 1; 
+				}
+			}
+		}
 	}
 }
+
 //====================================================================================================
+.popup_subscribe {
+	.popup__body {
+		padding: 60px 20px;
+
+		@media (min-width:$md4+px) {
+			padding: 40px 20px;
+		}
+	}
+
+	.title_h4 {
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	form {
+		margin: 40px auto 0 auto;
+		width: 260px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media (min-width:$md3+px) {
+			width: 300px;
+		}
+
+		input {
+			width: 260px;
+			border: 1px solid $pink-hover;
+			padding-right: 70px;
+
+			@media (min-width:$md4+px) {
+				width: 300px;
+			}
+		}
+
+		button {
+			right: 10px;
+		}
+	}
+}
+
+.popup_expert,
+.popup_donate {
+	.popup__body {
+		padding: 40px 25px;
+
+		@media (min-width:$md4+px) {
+			padding: 60px 45px;
+		}
+	}
+	.title_h3,
+	.title_h4 {
+		color: $blue;
+		text-align: left;
+	}
+
+	.title_h4 {
+		@include adaptiv-value("margin-top", 30, 20, 1);
+	}
+
+	form {
+		@include adaptiv-value("margin-top", 40, 20, 1);
+
+		input {
+			border-radius: 0;
+			background: transparent;
+			border: none;
+			border-bottom: 1px solid $blue;
+		}
+
+		.input._error {
+			border-radius: 0;
+			border: none;
+			border-bottom: 1px solid $red;
+		}
+		input._focus {
+			border-radius: 0;
+			border: none;
+			border-bottom: 1px solid $blue;
+			box-shadow: none;
+		}
+		input._filled{
+			border: none;
+			border-bottom: 1px solid $green;
+		}
+
+		label {
+			padding-left: 0;
+			top: 31px;
+		}
+	}
+}
+
+
+.popup_thankyou-message{
+	.popup__body{
+		border: 2px solid $green;
+	}
+	.title_h4{
+		text-align: center;
+	}
+}
 //====================================================================================================

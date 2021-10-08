@@ -1,0 +1,162 @@
+
+
+.single {
+	flex: 1 1 auto;
+	min-width: 0;
+	/* .single__breadcrumbs */
+	&__breadcrumbs {}
+
+	/* .single__info */
+	&__info {}
+
+	/* .single__content */
+	&__content {
+		margin-top: 40px;
+	}
+
+	/* .single__rating */
+	&__rating {}
+
+	/* .single__share */
+	&__share {}
+}
+
+.breadcrumbs {
+
+	/* .breadcrumbs__list */
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	/* .breadcrumbs__item */
+	&__item {
+		position: relative;
+		margin-right: 28px;
+		color: $mainColor;
+
+		img {
+			position: absolute;
+			width: 4.4px;
+			height: 5px;
+			top: 50%;
+			transform: translateY(-50%);
+			right: -10px;
+		}
+
+		&:last-child {
+			img {
+				display: none;
+			}
+		}
+	}
+
+	/* .breadcrumbs__link */
+	&__link {
+		color: $mainColor;
+	}
+}
+
+.info {
+	margin-top: 23px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	@media (min-width:$md3+px){
+		 flex-direction: row; 
+	}
+	/* .info__img */
+	&__img {
+		width: 66px;
+		height: 69.24px;
+		grid-column: 1/2;
+		grid-row: 1/3;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	/* .info__author */
+	&__author {
+		display: grid;
+		grid-template: minmax(min-content, max-content) minmax(min-content, max-content) / minmax(min-content, max-content) minmax(min-content, max-content);
+		gap: 5px;
+		column-gap: 10px;
+		row-gap: 5px;
+		span:first-child{
+			grid-column: 2/3;
+			grid-row: 1/2;
+		}
+		span:last-child{
+			color: $pink;
+			grid-column: 2/3;
+			grid-row: 2/3;
+			@media (min-width:$md1+px){
+				width: 80%; 
+			}
+		}
+	}
+
+	/* .info__date */
+	&__date {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	/* .info__time */
+	&__time {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+}
+
+
+.rating {
+	margin-top: 40px;
+	/* .rating__title */
+	&__title {}
+
+	/* .rating__stars */
+	&__stars {
+		margin-top: 13px;
+		cursor: pointer;
+	}
+}
+
+.share {
+	margin-top: 40px;
+	background: $green;
+	padding: 20px 40px 30px 20px; 
+	max-width: 358px;
+	border-radius: 10px;
+	/* .share__title */
+	&__title {}
+
+	/* .share__list */
+	&__list {
+		margin-top: 10px;
+	}
+	&__item{
+		background: $white;
+	}
+}
+
+.recommendations {
+	margin-top: 35px;
+	/* .recommendations__container */
+	&__container {}
+
+	/* .recommendations__title */
+	&__title {
+		text-align: left;
+	}
+
+	/* .recommendations__carts */
+	&__carts {
+		margin-top: 43px;
+	}
+}

@@ -1,6 +1,9 @@
 .calendar {
 	margin-top: 80px;
-
+	&.tcp{
+		margin-top: 0;
+		width: 100%;
+	}
 	/* .calendar__container */
 	&__container {}
 
@@ -24,6 +27,13 @@
 		padding: 40px;
 		position: relative;
 		min-height: 529px;
+		&.tcp{
+			box-shadow: none;
+			padding-top: 10px;
+			padding-left: 0;
+			padding-right: 0;
+			min-height: auto;
+		}
 
 		&.pink {
 			.calendar__list li {
@@ -42,14 +52,11 @@
 
 	/* .calendar__title */
 	&__title {
-		font-weight: 600;
-		font-size: 20px;
-		line-height: 135%;
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
-		color: $blue;
 		text-align: center;
 		z-index: 1;
+		&.tcp{
+			text-align: left;
+		}
 
 	}
 
@@ -123,5 +130,9 @@
 				top: unset;
 			}
 		}
+	}
+
+	&__descr{
+		margin-top: 20px;
 	}
 }
